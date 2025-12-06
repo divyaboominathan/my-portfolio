@@ -1,38 +1,19 @@
-.App {
-  text-align: center;
+/* /* --- Root Setup (Crucial for Full Height) --- */
+html, body, #root {
+  height: 100%; /* Makes the root elements take up 100% of the viewport */
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --- Flexbox Container for the Whole App --- */
+.app-container { /* This class should wrap your Header, main, and Footer in App.tsx */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh; /* Ensures the container is at least the height of the viewport */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --- Main Content Area --- */
+main {
+  flex-grow: 1; /* This pushes the main content to take up all available vertical space */
+  padding: 20px 50px; /* Example padding */
 }

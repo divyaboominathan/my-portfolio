@@ -1,0 +1,33 @@
+.main-footer {
+    background-color: #34495e;
+    /* Slightly different dark background */
+    color: #ecf0f1;
+    /* Light text */
+    font-size: 0.9em;
+    text-align: center;
+     padding: 12px 15px;   /* Compact, consistent padding */
+    width: 100%;
+
+    margin-top: auto;  /* Forces footer to bottom of page */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-footer p {
+    margin: 4px 0;
+}
+
+.contact-info,
+.address {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 10px;
+    border-top: 1px solid #7f8c8d;
+    /* Light separator line */
+    padding-top: 8px;
+}

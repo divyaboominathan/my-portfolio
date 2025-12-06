@@ -11,3 +11,160 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* /* --- Root Setup (Crucial for Full Height) --- */
+html, body, #root {
+  height: 100%; /* Makes the root elements take up 100% of the viewport */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Flexbox Container for the Whole App --- */
+.app-container { /* This class should wrap your Header, main, and Footer in App.tsx */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container is at least the height of the viewport */
+}
+
+/* --- Main Content Area --- */
+main {
+  flex-grow: 1; /* This pushes the main content to take up all available vertical space */
+  padding: 20px 20px; /* Example padding */
+}
+
+.home-container {
+  width: 100%;
+  min-height: calc(100vh - 240px); /* Adjust based on header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+    padding: 0 20px 40px 20px;   /* For spacing on small screens */
+  box-sizing: border-box;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Stack on small screens */
+}
+
+.left-section {
+  flex: 1;
+   min-width: 280px;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.name-highlight {
+  color: #1e40af;
+}
+
+.role-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.description {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  color: #475569;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.cta-button {
+  padding: 12px 28px;
+  background: #1e40af;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.cta-button:hover {
+  background: #1e3a8a;
+}
+
+.skills-list {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.skills-list span {
+  background: #e2e8f0;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .profile-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  .role-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 30px 15px;
+    min-height: auto; /* Let it grow naturally */
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .role-title {
+    font-size: 1.4rem;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,20 @@
+/* /src/assets/styles/TechPill.css */
+
+.tech-pill {
+    display: inline-block;
+    padding: 6px 15px;
+    margin: 5px;
+    /* Styles for the "pill" look */
+    border-radius: 20px; 
+    background-color: #3498db; /* Blue background */
+    color: white;
+    font-size: 0.9em;
+    font-weight: 500;
+    white-space: nowrap; /* Prevents text from breaking */
+    transition: background-color 0.2s ease;
+}
+
+.tech-pill:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
