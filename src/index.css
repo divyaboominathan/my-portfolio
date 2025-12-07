@@ -13,33 +13,38 @@ code {
 }
 
 /* /* --- Root Setup (Crucial for Full Height) --- */
-html, body, #root {
-  height: 100%; /* Makes the root elements take up 100% of the viewport */
+html,
+body,
+#root {
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* --- Flexbox Container for the Whole App --- */
-.app-container { /* This class should wrap your Header, main, and Footer in App.tsx */
+.app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the container is at least the height of the viewport */
+  height: 100vh;
 }
 
 /* --- Main Content Area --- */
 main {
-  flex-grow: 1; /* This pushes the main content to take up all available vertical space */
-  padding: 20px 20px; /* Example padding */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .home-container {
-  width: 100%;
-  min-height: calc(100vh - 240px); /* Adjust based on header height */
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f8fafc;
-    padding: 0 20px 40px 20px;   /* For spacing on small screens */
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -50,12 +55,12 @@ main {
   gap: 40px;
   width: 100%;
   max-width: 1200px;
-  flex-wrap: wrap; /* Stack on small screens */
+  flex-wrap: wrap;
 }
 
 .left-section {
   flex: 1;
-   min-width: 280px;
+  min-width: 280px;
 }
 
 .heading {
@@ -152,7 +157,7 @@ main {
 @media (max-width: 600px) {
   .home-container {
     padding: 30px 15px;
-    min-height: auto; /* Let it grow naturally */
+    min-height: auto;
   }
 
   .heading {

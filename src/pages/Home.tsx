@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Profile from "../assets/images/profile.jpg";
-import Header from "../components/layouts/Header";
 
 const Home: React.FC = () => {
   return (
@@ -25,8 +24,8 @@ const Home: React.FC = () => {
           </Link>{" "}
           <a
             className="cta-button"
-            href="/Divya_Resume.pdf" /* Path relative to the /public folder */
-            download="Divya_Resume_SoftwareEngineer.pdf" /* Sets the filename for the download */
+            href="/Divya_Resume.pdf"
+            download="Divya_Resume_SoftwareEngineer.pdf"
           >
             Download Resume
           </a>
@@ -36,6 +35,7 @@ const Home: React.FC = () => {
             <span>TypeScript</span>
             <span>Node.js</span>
             <span>UI/UX</span>
+            <span>Jest</span>
           </div>
         </div>
 

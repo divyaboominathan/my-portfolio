@@ -7,14 +7,15 @@ const Footer: React.FC = () => {
   return (
     <footer className="main-footer">
       <div className="footer-content">
-        <p className="contact-info">
-          Contact: 6369007175 | divyaboominathan21121995@gmail.com
-        </p>
-
-        {/* <div className="address">
-          337/2A,Kspn Nagar, Kamarajar colony, melur road, Sivaganga 630562.
-        </div> */}
-
+        <div className="footer-details">
+          <div className="contact-info">
+            <p>Contact: 6369007175</p>
+          </div>
+          <div className="address">
+            <p>Email: divyaboominathan21121995@gmail.com</p>
+          </div>
+        </div>
+        <div className="separator"></div>
         <p className="copyright">
           © {currentYear} Divya | Software Engineer. All Rights Reserved.
         </p>
