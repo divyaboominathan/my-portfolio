@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../../assets/styles/Header.css";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import {FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 const Header: React.FC = () => {
